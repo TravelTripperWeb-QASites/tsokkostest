@@ -1,0 +1,15 @@
+{
+    "room_slug":
+    {
+        "required": true,
+        "placeholder": "Enter the room name part from the room detail page url  [Example: Anastasia-Beach-Hotel]",
+        "label": "Room URL Slug"
+    },
+    "large_image":
+    {
+      "required": true,  
+      "type": "image",
+      "label": "Upload Hero Image"
+      
+    }
+}

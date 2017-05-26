@@ -1,0 +1,529 @@
+.booking-widget {
+  position: fixed;
+  z-index: 1000000000;
+  top: 0;
+  right: -370px;
+  width: 370px;
+  height: 100%;
+  -webkit-transition: right 0.4s;
+  transition: right 0.4s;
+  @extend .clearfix;
+
+  &.-show {
+    right: 0;
+  }
+
+#selecthotel{
+    optgroup{ 
+          text-transform: uppercase;
+          option{
+              text-transform: none;
+          } 
+        
+    }
+}
+
+.booking-widget_header {
+  background: #322C2C;
+  @extend .clearfix;
+}
+
+.booking-widget_close {
+  float: right;
+  font-size: 36px;
+  font-weight: lighter;
+  text-align: center;
+  width: 58px;
+  height: 58px;
+  line-height: 58px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.booking-widget_title {
+  font-family: 'Lato', sans-serif;
+  font-size: 24px;
+  font-weight: lighter;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-align: center;
+  height: 58px;
+  margin: 0 58px 0 0;
+  line-height: 58px;
+  color: #fff;
+}
+
+.booking-widget_content {
+  position: absolute;
+  top: 58px;
+  right: 0;
+  left: 0;
+  height: auto;
+  max-height: calc(100% - 58px);
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: #E6E4E5;
+
+  .bk-select{
+      width: 100%;
+      min-height: 40px;
+      border:0px;
+      cursor: pointer;
+  }
+}
+
+// Flexible dates --------------------------------------------------------------
+.booking-widget_flexible-dates {
+  display: block;
+  height: 48px;
+  line-height: 48px;
+  padding: 0 20px;
+  color: #322c2c;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: bold;
+  font-size: 11px;
+  font-family: 'Lato', sans-serif;
+}
+
+.booking-widget_flexible-dates_icon {
+  display: inline-block;
+  width: 11px;
+  height: 11px;
+  margin-left: 10px;
+  background: url('../images/booking-widget/arrow-right.svg') no-repeat;
+  background-size: 11px 11px;
+}
+
+// Footer ----------------------------------------------------------------------
+.booking-widget_footer {
+  padding: 20px;
+  color: #7a7878;
+
+  p {
+    margin: 0;
+  }
+}
+
+.booking-widget_footer_links {
+  position: relative;
+}
+
+.booking-widget_footer_links_item {
+  position: relative;
+  display: inline-block;
+  font-size: 12px;
+  text-decoration: none;
+  color: #7a7878;
+  margin-right: 26px;
+  margin-top: 10px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &.-email::after {
+    width: 17px;
+    height: 13px;
+    background: url('../images/booking-widget/footer-email.svg') no-repeat;
+    background-size: 17px 13px;
+    vertical-align: middle;
+  }
+ &.-email::before {
+    margin-right: 0px;
+ }
+  &.-contacts::before {
+    width: 17px;
+    height: 16px;
+    background: url('../images/booking-widget/footer-contacts.svg') no-repeat;
+    background-size: 17px 16px;
+    vertical-align: bottom;
+  }
+
+  &.-reservation::before {
+    width: 14px;
+    height: 18px;
+    background: url('../images/booking-widget/footer-reservation.svg') no-repeat;
+    background-size: 14px 18px;
+    vertical-align: bottom;
+  }
+
+  &:before {
+    content: '';
+    display: inline-block;
+    margin-right: 10px;
+  }
+	 &:after {
+    content: '';
+    display: inline-block;
+    margin-left: 10px;
+  }
+}
+
+// View Special Rate -----------------------------------------------------------
+.booking-widget_special-rates {
+  padding: 0 20px;
+  @extend .clearfix;
+}
+
+.booking-widget__special-rates_title {
+  font-size: 14px;
+  height: 40px;
+  line-height: 40px;
+  margin: 0;
+  text-align: center;
+  cursor: pointer;
+  color: #7a7878;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.booking-widget_special-rates_button {
+  display: block;
+  font-family: 'Lato', sans-serif;
+  font-size: 12px;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 2px;
+  margin: 20px 0;
+  padding: 12px 30px;
+  border: 1px solid #7a7878;
+  background: #7a7878;
+  color: #fff;
+}
+
+.booking-widget_special-rates_iata {
+  display: block;
+  padding: 10px 0;
+  margin: 10px 0;
+  border-top: 1px solid #e6e5e5;
+  border-bottom: 1px solid #e6e5e5;
+
+  span {
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    float: left;
+    width: 86px;
+    height: 30px;
+    line-height: 30px;
+    color: #322c2c;
+  }
+}
+
+.booking-widget_special-rates_iata_input {
+  padding-left: 96px;
+
+  input {
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    width: calc(100% - 20px);
+    height: 30px;
+    margin: 0;
+    padding: 0 10px;
+    border: 0;
+    background: #f7f7f7;
+    outline: none;
+    color: #322c2c;
+  }
+}
+
+.booking-widget_special-rates_list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  @extend .clearfix;
+
+  li {
+    position: relative;
+    float: left;
+    width: 100%;
+    margin: 5px 0;
+  }
+}
+
+.booking-widget_special-rates_radio {
+  position: relative;
+
+  input[type="radio"] {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+
+    &:checked {
+      & + .booking-widget_special-rates_radio-icon {
+        &:before {
+          visibility: visible;
+        }
+      }
+    }
+  }
+
+  input[type="text"] {
+    float: right;
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    height: 30px;
+    margin: 0;
+    padding: 0 10px;
+    border: 0;
+    background: #f7f7f7;
+    outline: none;
+    color: #322c2c;
+  }
+}
+
+.booking-widget_special-rates_radio-icon {
+  position: relative;
+  top: 4px;
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #000;
+
+  &:before {
+    visibility: hidden;
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -5px;
+    margin-left: -5px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #b4975a;
+  }
+}
+
+.booking-widget_special-rates_radio_title {
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+  margin-left: 10px;
+  color: #322c2c;
+}
+
+
+// Rooms, Adults, Children -----------------------------------------------------
+.bookin-widget_parameters {
+  margin: 10px 0;
+  padding: 0 20px;
+  text-align:right;
+}
+
+.bookin-widget_parameters_select-group {
+  @extend .clearfix;
+  font-size: 0; 
+  margin: 0 -10px;
+
+  select {
+    display: inline-block;
+    min-width: 30%;
+    margin: 0 5px;
+    border: 1px solid #ACACAC;
+    border-radius: 0;
+    font-size: 14px;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.bookin-widget_parameters_description {
+  font-size: 11px;
+  font-style: italic;
+  text-align: right;
+  color: #7a7878;
+  margin: 5px 0 0;
+}
+
+// Rate -----------------------------------------------------------------------
+.booking-widget_rate {
+  padding: 20px 20px 0;
+}
+
+.booking-widget_rate_content {
+  @extend .clearfix;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.booking-widget_rate_col {
+  float: left;
+  font-family: 'Lato', sans-serif;
+  width: 50%;
+  height: 46px;
+
+  &.-title {
+    font-size: 18px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #322c2c;
+		padding-top:12px; 
+  }
+
+  &.-count {
+    font-size: 48px;
+    font-weight: lighter;
+    text-align: left;
+    color: #b4975a;
+    line-height: 46px; 
+  }
+}
+
+.booking-widget_rate_button {
+  display: block;
+  width: 100%;
+  font-family: 'Lato', sans-serif;
+  font-size: 13px;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 2px;
+  margin: 0;
+  padding: 12px 30px;
+  border: 1px solid #000;
+  background: #000;
+  color: #fff;
+  outline: none;
+}
+
+
+
+// TODO
+.booking-widget_accord {
+  background: #fff;
+  margin: 10px 0;
+
+  &.-first {
+    margin-top: 0;
+  }
+
+  &.-unindents {
+    margin: 0;
+  }
+}
+
+.booking-widget_accord_title {
+  font-size: 14px;
+  height: 40px;
+  line-height: 40px;
+  margin: 0;
+  text-align: center;
+  cursor: pointer;
+  color: #7a7878;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.booking-widget_accord_toggler {
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+
+  &.-show {
+    &:after {
+      -webkit-transform: rotate(180deg);
+          -ms-transform: rotate(180deg);
+              transform: rotate(180deg);
+    }
+  }
+
+  &:after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    right: 25px;
+    top: 50%;
+    width: 11px;
+    height: 9px;
+    margin-top: -4px;
+    background: url('../images/booking-widget/arrow-bottom.svg') no-repeat;
+    background-size: 11px 9px;
+  }
+}
+
+.booking-widget_accord_content {
+  display: none;
+  @extend .clearfix;
+}
+
+
+
+
+
+
+// Check In, Check Out Calendars -----------------------------------------------
+.booking-widget_calendar {
+  position: relative;
+  height: 46px;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+
+  &.-error {
+    border-top: 1px solid #b4975a;
+    border-bottom: 1px solid #b4975a;
+  }
+}
+
+.booking-widget_calendar_input {
+  position: absolute;
+  top: 2px;
+  right: 50px;
+  bottom: 2px;
+  left: 185px;
+
+  input {
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    color: #b4975a;
+  }
+}
+
+.booking-widget_calendar_icon {
+  position: relative;
+  top: 13px;
+  padding-left: 50px;
+  font-family: 'Lato', sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #7a7878;
+
+  &:before {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    width: 17px;
+    height: 17px;
+    margin-top: -10px;
+    background: url('../images/booking-widget/calendar.svg') no-repeat;
+    background-size: 17px 17px;
+  }
+}
+
+.booking-widget_calendar_error-text {
+  display: none;
+  color: #b4975a;
+  margin: 5px 0;
+  padding: 0 20px;
+}
+}

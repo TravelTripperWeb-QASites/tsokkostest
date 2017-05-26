@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html ng-app="protarasApp">
+
+  {% include head.html %}
+
+  <body>
+
+  {% include header.html %}
+
+<section class="inner-banner-others">
+
+<!--Breadcrum here-->
+  <div class="top-sec">
+        <div class="breadcrumb-nav">  
+          <ol class="breadcrumb">
+            <li><a href="">Home</a></li>
+      <li class="active">Privacy Policy</li>
+          </ol>
+    </div> 
+         <h2>Privacy Policy</h2> 
+         
+     </div>
+
+</section>
+
+<section class="container privacy">
+<div class="col-md-12">
+{% region privacy_policy %}
+</div>
+</section>
+{% include footer.html %}
+
+{% include booking-widget.html %}
+
+{% include scripts.html %}
+</body>
+</html>

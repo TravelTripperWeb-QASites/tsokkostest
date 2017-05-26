@@ -1,0 +1,53 @@
+
+{  
+    
+      
+      "logo":"/images/logo.png",
+      "m-logo":"/images/logo.png",
+
+      "booking-link":"​https://tsokkos.reztrip.com",
+      "contact-link": "mailto:reservations@tsokkos.com",
+
+       "header-links":[
+
+
+            
+            {"name":"Hotels","url":"/hotels-in-protaras/", "parent":"hotels"},  
+            {"name":"Weddings", "url":"/weddings/", "parent":"weddings"},
+            {"name":"Explore Cyprus", "url":"/explore-cyprus/", "parent":"explore-cyprus"} 
+
+         ],
+
+      
+
+         
+      "footer-links":[ 
+                        {"name":"Tsokkos Hotels & Resorts", "parent":"Tsokkos"}
+                       
+                     ],
+
+      
+
+      "social-media":[
+
+
+                        {"class-name":"fa fa-facebook", "url":"https://www.facebook.com/tsokkos.hotels"}, 
+                        {"class-name":"fa fa-twitter", "url":"https://twitter.com/tsokkos"}  
+
+                    ],
+
+
+                    "copyrights":"© 2016 Tsokkos Hotels",
+                    "email":"reservations@tsokkos.com",
+                    "address": "P.O.Box 30221, <br>5341 Ayia Napa,<br> Cyprus ",
+                    "address2":"New York City, NY 10065",
+                    "tel":"(+357) 77 77 74 44",
+                    "tel2":"(+357) 97707444",
+                    "fax": "(+357) 23 831 447"
+
+
+     
+                    
+
+}
+

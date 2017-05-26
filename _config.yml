@@ -1,10 +1,26 @@
-
-gems:
-- jekyll-sitemap
-keep_files:
-- assets
-rsync_copy:
-- _assets
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+# Site settings
+title: Tsokkos Hotels & Resorts | Hotels in Cyprus | Apartments in Cyprus | Ayia Napa Holidays | Hotel Weddings Cyprus | Accommodation in Cyprus
+email: reservations@tsokkos.com
+description: > # this means to ignore newlines until "baseurl:"
+  Tsokkos Hotels offers a wide range of accommodation with over 30 hotels, a tourist village and apartments to choose from. From five and four star luxurious guest rooms featuring every convenience to tasteful self-catering hotel apartments set in beautiful gardens, all of which are set on central beachfront locations.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://www.tsokkos.com" # the base hostname & protocol for your site
+twitter_username: jekyllrb
+github_username:  jekyll
+permalink: pretty
+# Build settings 
+markdown: kramdown
+leftCurleys: "{{"
+rightCurleys: "}}"
 
 default_lang: 'en'
 languages: ['en']
+
+keep_files: ['assets']
+rsync_copy: ['_assets']

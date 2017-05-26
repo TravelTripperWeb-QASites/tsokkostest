@@ -1,0 +1,95 @@
+.booking-widget {
+   .booking-widget_header{
+      background: #2378bc;
+   }
+ .booking-widget_calendar_input input{
+   color: #000000;
+ }
+ .booking-widget_rate_col.-count{
+    color: #2378bc;
+ }
+	.ui-datepicker {
+  width: auto;
+  padding: 20px;
+  background: #f9f9f9;
+
+  .ui-datepicker-prev,
+  .ui-datepicker-next {
+    top: 8px;
+    width: 5px;
+    height: 5px;
+    border-top: 2px solid #333;
+
+    &.ui-state-disabled {
+      opacity: 0.2;
+    }
+  }
+
+  .ui-datepicker-prev {
+    left: 80px;
+    border-left: 2px solid #333;
+    transform: rotate(-45deg);
+    cursor: pointer;
+  }
+
+  .ui-datepicker-next {
+    right: 80px;
+    border-right: 2px solid #333;
+    transform: rotate(45deg);
+    cursor: pointer;
+  }
+
+  .ui-datepicker-title {
+    margin: 0;
+    line-height: normal;
+  }
+
+  .ui-datepicker-calendar {
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    font-weight: lighter;
+
+    tbody tr {
+      border-top: 1px solid #ebebeb;
+    }
+
+    th {
+      font-size: 10px;
+      text-transform: uppercase;
+      font-weight: normal;
+      color: #333;
+    }
+
+    td a,
+    td span {
+      text-align: center;
+      color: #333;
+    }
+
+    .ui-state-disabled {
+      opacity: .3;
+    }
+
+    .ui-datepicker-today {
+      a {
+        font-weight: bold;
+      }
+    }
+
+    .ui-datepicker-current-day {
+      .ui-state-active {
+        color: #fff;
+        background: #2378bc;
+        border-radius: 5px;
+      }
+    }
+  }
+}
+
+.ui-datepicker-header {
+  font-family: 'Lato', sans-serif;
+  font-size: 13px;
+  color: #333;
+  margin-bottom: 10px;
+}
+}

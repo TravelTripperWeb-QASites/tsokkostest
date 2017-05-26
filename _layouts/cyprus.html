@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html ng-app="protarasApp">
+{% include head.html %}
+
+<body class="cyprus">
+{% include header.html %}
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel"> 
+  
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active"> {% region cyprus_banner %}
+      <div class="carousel-caption">
+        {% region welcome_cyprus %}
+        <!--<p><a class="btn btn-lg btn-primary" href="" role="button">Discover This Hotel</a></p>-->
+      </div>
+    </div>
+  </div>
+</div>
+<section>
+  <div class="container">
+    <div class="padd-36 text-center">
+      {% region cyprus_welcome_note %}
+    </div>
+  </div>
+</section>
+
+<section>
+<div class="container-fluid no-margin">
+   <div class="row no-margin equal  grey-bg">
+
+     <div class="col-md-6 no-margin" ng-controller="cyprusCtrl as vm">
+             <ng-map zoom="9"
+                class="Cyprusmap"  center="35.045106, 33.193817"  styles="[{stylers:[ { hue: '#333' },
+      { saturation: -80 },
+        { lightness: 0 }]},{elementType:'labels',stylers:[{visibility:'off'}]},{
+        featureType: 'landscape',
+        elementType: 'all',
+        stylers: [
+          { saturation: -100 },
+        { lightness: 0 }
+        ]
+      },{
+        featureType: 'road',
+       elementType: 'geometry',
+        stylers: [
+           { saturation: -80 },{ lightness: '20' }
+        ]
+      },{
+        featureType: 'transit',
+        elementType: 'all',
+        stylers: [
+          {visibility:'off'}
+        ]
+      },
+        {
+        featureType: 'Administrative',
+        elementType: 'all',
+        stylers: [
+          { visibility:'off' }
+        ]
+      },{featureType:'water',stylers:[ { hue: '#becbcf' },
+      { saturation: 0 },
+        { lightness: 0 }]},{color: '#becbcf'}]">
+         
+           <custom-marker 
+                    position="34.767246, 32.430954">
+                    <div>
+                        <div class="infobox">
+                            <div class="infobox__custom-name">
+                                <div><img src="/images/cyprus/marker.png"></div>
+                                <div class="locName"><strong>Paphos</strong></div> 
+                            </div>
+                             
+                        </div>
+                    </div>
+                </custom-marker>
+                <custom-marker 
+                    position="34.992518, 34.009037">
+                    <div>
+                        <div class="infobox">
+                            <div class="infobox__custom-name">
+                                <div><img src="/images/cyprus/marker.png"></div>
+                                <div class="locName" style="margin-left:-20px;"><strong>Ayia Napa</strong></div> 
+                            </div>
+                             
+                        </div>
+                    </div>
+                </custom-marker>
+                <custom-marker 
+                    position="35.007143, 34.049892">
+                    <div>
+                        <div class="infobox">
+                            <div class="infobox__custom-name">
+                                <div><img src="/images/cyprus/marker.png"></div>
+                                <div class="locName" style="margin-left:60px; margin-top:-5px;"><strong>Protaras</strong></div> 
+                            </div>
+                             
+                        </div>
+                    </div>
+                </custom-marker>
+                <custom-marker 
+                    position="35.185566, 33.382276">
+                    <div>
+                        <div class="infobox">
+                           <div class="infobox__custom-name">
+                                <div><img src="/images/cyprus/marker.png"></div>
+                                <div class="locName"><strong>Nicosia</strong></div> 
+                            </div>
+                             
+                        </div>
+                    </div>
+                </custom-marker>
+                
+                <custom-marker 
+                    position="34.707130, 33.022617">
+                    <div>
+                        <div class="infobox">
+                            <div class="infobox__custom-name">
+                                <div><img src="/images/cyprus/marker.png"></div>
+                                <div class="locName"><strong>Limassol</strong></div> 
+                            </div>
+                             
+                        </div>
+                    </div>
+                </custom-marker>
+                <custom-marker 
+                    position="34.909989, 33.624001">
+                    <div>
+                        <div class="infobox">
+                            <div class="infobox__custom-name">
+                                <div><img src="/images/cyprus/marker.png"></div>
+                                <div class="locName"><strong>Larnaca</strong></div> 
+                            </div>
+                             
+                        </div>
+                    </div>
+                </custom-marker>
+            </ng-map>
+    
+     </div>
+     <div class="col-md-6 no-margin">
+             <div class="visit-content">
+                {% region when_to_visit_cyprus %}
+                
+          </div>
+               
+     </div>
+  </div>
+</div>
+</section>
+
+<section>
+  <div class="container-fluid no-margin">
+    <div class="row no-margin equal">
+      <div class="col-sm-12 no-margin "> {% region banner_beach_image %}</div>
+     
+    </div>
+  </div>
+</section>
+<section>
+  <div class="container col-listing"> 
+      {% region explore_main_cities_cyprus %}
+       
+       <div class="row">
+       <div class="col-md-12">
+         <div class="col-md-3 col-sm-6 col-xs-12">
+          {% region explore_city_cyprus_1 %}
+         </div>
+          
+         <div class="col-md-3 col-sm-6 col-xs-12">
+         {% region explore_city_cyprus_2 %}
+         </div> 
+         <div class="col-md-3 col-sm-6 col-xs-12">
+         {% region explore_city_cyprus_3 %}
+         </div>
+         <div class="col-md-3 col-sm-6 col-xs-12">
+         {% region explore_city_cyprus_4 %}
+         </div>
+         </div> 
+       </div>
+
+       <div class="row">
+       <div class="col-md-12"  style="padding-top:20px;">
+         <div class="col-md-3 col-sm-6 col-xs-12">
+          {% region explore_city_cyprus_5 %}
+         </div>
+          
+         <div class="col-md-3 col-sm-6 col-xs-12">
+         {% region explore_city_cyprus_6 %}
+         </div>
+         <div class="col-md-3 col-sm-6 col-xs-12">
+         {% region explore_city_cyprus_7 %}
+         </div>
+         <div class="col-md-3 col-sm-6 col-xs-12">
+         {% region explore_city_cyprus_8 %}
+         </div>
+         </div> 
+       </div> 
+  </div>
+</section>
+<section class="details-tabs">  
+            <div class=" carousel-holder no-margin">
+              <!--Carousel starts here-->
+                  	<div id="rooms-carousel" class="carousel slide" data-ride="carousel">
+                      <!-- Indicators -->
+                      <ol class="carousel-indicators">
+                        <li data-target="#rooms-carousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#rooms-carousel" data-slide-to="1"></li>
+                        <li data-target="#rooms-carousel" data-slide-to="2"></li>
+                      </ol>
+                    
+                      <!-- Wrapper for slides -->
+                      <div class="carousel-inner" role="listbox">
+                        <div class="item active">
+                          {% region slide_1_cyprus %}
+                        </div>
+                        <div class="item">
+                          {% region slide_2_cyprus %}
+                        </div>
+                        <div class="item">
+                          {% region slide_3_cyprus %}
+                        </div>
+                      </div>
+                    
+                      <!-- Controls -->
+                      <a class="left carousel-control" href="#rooms-carousel" role="button" data-slide="prev">
+                        <span class="fa fa-angle-left" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                      </a>
+                      <a class="right carousel-control" href="#rooms-carousel" role="button" data-slide="next">
+                        <span class="fa fa-angle-right " aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                      </a>
+                    </div>
+                  <!--Carousel Ends here-->  
+    </div>
+</section>
+
+<section>
+<div class="container-fluid no-margin">
+   <div class="row no-margin equal  grey-bg  history">
+     {% region church_image %}
+     <div class="col-sm-6 no-margin">
+             <div class="box-content">
+               {% region unique_experience %}
+                
+
+                
+          </div> 
+     </div>
+  </div>
+</div>
+</section>
+
+ 
+<section>
+<div class="container">{% region experience_best_of_cyprus %}</div>
+  <div class="container-fluid no-margin"> 
+  	<div class="row no-margin experience">
+      <div class="col-sm-3 col-xs-6 no-margin"> 
+      {% region culinary_image %}
+      <a class="button-primary">Culinary</a>
+      </div> 
+      <div class="col-sm-3 col-xs-6 no-margin">{% region beach_image %}<a class="button-primary">Beach</a></div> 
+      <div class="col-sm-3 col-xs-6 no-margin">{% region shopping_image %}<a class="button-primary">Shopping</a></div> 
+      <div class="col-sm-3 col-xs-6 no-margin">{% region adventure_image %}<a class="button-primary">Adventure</a></div>
+      <div class="col-sm-3 col-xs-6 no-margin">{% region nightlife_image %}<a class="button-primary">Nightlife</a></div> 
+      <div class="col-sm-3 col-xs-6 no-margin">{% region art_culture_image %}<a class="button-primary">Art & Culture</a></div> 
+      <div class="col-sm-3 col-xs-6 no-margin">{% region events_image %}<a class="button-primary">Events</a></div> 
+      <div class="col-sm-3 col-xs-6 no-margin">{% region welness_spa_image %}<a class="button-primary">wellness & Spa</a></div>
+    </div>
+  </div>
+</section>
+<section class="blue-div"><img src="../images/weddings/logo_white.png" width="170" height="52" alt=""/></section>
+{% include weddings-section.html %} 
+{% include footer.html %}
+   {% include scripts.html %}
+    {% include booking-widget.html %}
+</body>
+</html>

@@ -1,11 +1,155 @@
 <!DOCTYPE html>
-<html>
-  <head></head>
+<html ng-app="protarasApp">
+
+  {% include head.html %}
+
   <body>
-    <div>
-      
-        {{ content }}
-      
+
+    {% include header.html %}
+
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+   <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="5"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="6"></li> 
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="homeCarousel carousel-inner" role="listbox">
+    <div class="item active">
+       {% region beach_holiday_img %}
+      <div class="carousel-caption">
+        {% region slide_beach_holiday %}
+      </div>
     </div>
+    <div class="item">
+       {% region ancient_mysteries_img %}
+      <div class="carousel-caption">
+        {% region slide_ancient_mysteries %}
+
+      </div>
+    </div>
+
+     <div class="item">
+       {% region gettysuit_main_img %} 
+     <div class="carousel-caption">
+        {% region slide_historical_sites %}
+      </div>
+    </div>
+
+    <div class="item">
+       {% region pierresuite_img %}
+      <div class="carousel-caption">
+        {% region slide_romantic_getaways %}
+
+      </div>
+    </div>
+
+    <div class="item">
+       {% region pierresuite_living1_img %}
+     <div class="carousel-caption">
+        {% region slide_vistas_of_sea %}
+      </div>
+    </div>
+
+    <div class="item">
+       {% region pierresuite_living2_img %}
+     <div class="carousel-caption">
+        {% region slide_sanctury_azure %}
+
+      </div>
+    </div>
+
+    <div class="item">
+       {% region pierresuite_living3_img %}
+     <div class="carousel-caption">
+        {% region slide_hitched_in_cyprus %}
+      </div>
+    </div>
+
+     <!-- Left and right controls -->
+      <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+  
+  </div>
+
+  
+</div>
+ 
+ 
+ <section>
+  <div class="container">
+   <div class="padd-36 text-center">
+      {% region why_book_tsokkos_hotels %}
+   </div>
+  </div>
+ </section>
+ 
+<section>
+<div class="container-fluid no-margin">
+   <div class="row no-margin equal  grey-bg">
+     {% region resort_image %}
+     <div class="col-sm-6 no-margin">
+             {% region home_page_unique_experience %}
+     </div>
+  </div>
+</div>
+</section>
+
+
+<section>
+<div class="container-fluid no-margin">
+   <div class="row no-margin equal"> 
+     <div class="col-sm-6 no-margin">
+             <div class="box-content-center">
+                {% region explore_hotel_resorts %}
+ 
+          </div>
+     </div>
+
+     {% region perfect_image %}
+
+  </div>
+</div>
+</section>
+
+<section class="loc-sec grey-bg">
+  
+       {% region hotel_unique_locations %}
+  
+</section>
+
+
+{% include weddings-section.html %} 
+
+ 
+<section class="hello-beach">
+
+  	  <h1>#HelloBeach</h1>
+</section>
+
+<section>
+  <div class="container padd-60 ">
+      <span class="col-sm-3 col-xs-6 no-margin">{% region home_page_gallery_1 %}</span>
+      <span class="col-sm-3 col-xs-6 no-margin">{% region home_page_gallery_2 %}</span>
+      <span class="col-sm-3 col-xs-6 no-margin">{% region home_page_gallery_3 %}</span>
+      <span class="col-sm-3 col-xs-6 no-margin">{% region home_page_gallery_4 %}</span>
+  </div>
+</section>
+
+    {% include footer.html %}
+   {% include scripts.html %}
+    {% include booking-widget.html %}
   </body>
+
 </html>
