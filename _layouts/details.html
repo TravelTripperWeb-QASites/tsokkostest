@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html ng-app="protarasApp">
+
+  {% include head.html %}
+ {% include scripts.html %}
+<body  ng-controller="detailController">
+{% include header.html %}
+
+<!--Inner page hero banner here-->
+<section class="inner-banner details">
+
+  <!--Breadcrum here-->
+  <div class="top-sec ">
+        <div class="breadcrumb-nav">  
+          <ol class="breadcrumb">
+            <li><a href="/hotels-in-paphos/">Hotels</a></li> 
+                 <li class="active">[[hotel.name]]</li>
+          </ol>
+    </div> 
+         <h2>[[hotel.name]]</h2> 
+         <h4>[[hotel.address.state]] / [[hotel.address.city]]</h4>
+     </div>
+      <div class="container">  
+     <!--Tab nav here-->
+     <ul class="nav-tabs" >
+        <li role="presentation"   class="active"><a data-scroll href="#overview"  class="active">Overview</a></li>
+        <li role="presentation"><a data-scroll  href="#rooms" >Rooms</a></li>
+        <li role="presentation"><a data-scroll  href="#offers">Offers</a></li>
+       <li role="presentation"><a data-scroll href="#location">Location</a></li>
+       <li role="presentation"><a data-scroll href="#gallery">Gallery</a></li>
+  </ul>
+  </div>
+</section>
+
+<!--Tab details here-->
+<section class="details-tabs">
+  <div class="tab-content"> 
+          <div class="container"> 
+                    <div class="col-md-12 col-xs-12"> 
+
+                      <h3  class="text-center">An exclusive Oasis by the Sea</h3>  
+                      <p  class="text-center">[[hotel.description]]</p>
+                     
+                    </div>
+                </div>
+             
+        </div>
+        
+    <div class="container">
+      <div class="address-line">[[hotel.address.street1]], [[hotel.address.zip_code]], [[hotel.address.state]], [[hotel.address.city]]  |  <span>T</span> <a ng-href="tel:[[hotel.phone_number]]">[[hotel.phone_number]]   <span>E</span> <a ng-href="mailto:[[hotel.email]]">[[hotel.email]]</a></div>
+    </div>
+</section>
+
+
+{% assign room_inst =  page.url | split: "/" %}
+{% assign room_heroimg = '' %}
+{% assign room_dtls = site.data._models.room_images %}
+
+{% for roomdtls_row in room_dtls %}
+    {% if roomdtls_row.room_slug == room_inst[2] %}
+        {% assign room_heroimg = roomdtls_row.large_image.url %}
+    {% endif %}
+{% endfor %}
+
+{% if room_heroimg != '' %}
+  <section class="banner2">
+    <img ng-src="{{ room_heroimg }}" alt="{{ page.title }}" class="img-responsive">
+  </section>
+{% endif %}
+
+
+<section class="amenities">
+  <div class="container p-70">
+      <div class="row grey-bg">
+          <div class="col-md-6 col-xs-12 grey-bg no-padding">
+              <div class="holder">
+                    <h3>Hotel Amenities</h3>
+                    <ul class="listing">
+                        <li ng-repeat="amenities in hotel.hotel_amenities">[[amenities | spaceless]]</li> 
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 col-xs-12">
+              <ul class="row thumbnails">
+                    <li class="col-md-6 col-xs-6">{% region details_img1 %}</li>
+                    <li class="col-md-6 col-xs-6">{% region details_img2 %}</li>
+                    <li class="col-md-6 col-xs-6">{% region details_img3 %}</li>
+                    <li class="col-md-6 col-xs-6">{% region details_img4 %}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section class="details-tabs" id="rooms" ng-repeat="room in rooms"  ng-show="$first">
+<section class="container"><div class="divider"></div></section>
+  <div class="container">
+        <div class="row"> 
+            <div class="col-md-6 col-xs-12  carousel-holder">
+              <!--Carousel starts here-->
+                    <div id="rooms-carousel" class="carousel slide" data-ride="carousel">
+                      <!-- Indicators -->
+                     
+                      <ol class="carousel-indicators">
+                        <li ng-repeat="roomgallery in room.photos"  data-target="#rooms-carousel" data-slide-to="$index" ng-class="{active:!$index}" ></li> 
+                      </ol>
+                       
+                      <!-- Wrapper for slides -->
+                      <div class="carousel-inner" role="listbox">
+                        <div  ng-class="{active:!$index}" ng-repeat="roomgallery in room.photos" class="item ">
+                          <img ng-src="[[roomgallery.yankee_large]]"  alt=""/> 
+                        </div>
+                         
+                      </div>
+                    
+                      <!-- Controls -->
+                      <a class="left carousel-control" href="#rooms-carousel" role="button" data-slide="prev">
+                        <span class="fa fa-angle-left" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                      </a>
+                      <a class="right carousel-control" href="#rooms-carousel" role="button" data-slide="next">
+                        <span class="fa fa-angle-right " aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                      </a>
+                    </div>
+                  <!--Carousel Ends here-->
+                   
+             </div>
+            <div class="col-md-6 col-xs-12 p-t-100 carousel-detail">
+              <h3>OUR ROOMS</h3>
+              <p>[[room.description]]</p>
+                <div class="readon">
+                    <a ng-href="[[hotel.website]]/search?selected_room=" class="btn btn-primary">View Rooms</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+ 
+<section class="container" id="offers"><div class="divider"></div></section>
+<section class="container">
+  <h4 class="c-title">Special offers</h4> 
+  
+   <div class="row grey-bg no-margin no-padding wdvider" ng-repeat="offers in offering.special_rates">  
+      <div class="col-sm-12  padd30" > 
+        <div class="col-sm-4 col-xs-12 no-padding">
+             <div class="arrow_box">
+               <img ng-src="[[offers.lead_photo_url.thumb_yankee_jumbo]]" alt="[[offers.rate_plan_name]]" class="img-responsive" />
+              </div>
+       </div>
+       <div class="col-sm-5 col-xs-12 offers-box">
+                   <p class="offer-title"><strong>[[offers.rate_plan_name | filterHtmlChars]]</strong></p>
+                   <p>[[offers.long_description  | limitTo: 360]] </p>
+                    
+                    
+       </div>
+       <div class="col-md-3 special-offers">
+                   <div class="btn-group-nav readon">
+                      <a ng-href="[[offers.promo_url]]" target="_blank" class="btn btn-primary">View This Deal</a> 
+                      <!--a href="[[hotel.website]]/en/special_offer" class="btn btn-primary">View All Deals</a--> 
+                    </div> 
+        </div> 
+      </div>
+    </div>
+</section>
+<section class="container" id="offers"><div class="divider"></div></section>
+<div id="location" class="container"> <h4 class="c-title">Location</h4> </div>
+<section  class="container location-detail spsl-offers">
+
+  <div class="row grey-bg no-margin no-padding">
+      <div class="sample-pic">
+         <img ng-src="[[hotel.lead_photo.thumb_yankee_large]]"> 
+      </div>
+      <div class="col-md-6 map no-padding ng-cloak"> 
+            
+           <ng-map ng-if="hotel.longitude" zoom="18" center="[ {{ page.lat }},  {{ page.lng }}]" scrollwheel="false" draggable="false">
+           <span class="hotelmap"> [[hotel.name]]</span>
+             <marker position="{{ page.lat }},  {{ page.lng }}"  
+      optimized="false"
+      icon="{
+        url:'/images/icons/marker.png',
+        scaledSize:[36,53]
+      }"  draggable="false"></marker>
+  </ng-map>  
+        </div>
+        <div class="col-md-6 cont-holder">
+           <div class="p-l-15">
+                    <i>[[hotel.name]]</i>
+                    <p> 
+                        <b>Address</b><br/>
+                        [[hotel.address.street1]],<br/>[[hotel.address.zip_code]], [[hotel.address.state]],<br/> [[hotel.address.city]] </p>
+                    </p>
+                    <div class="quote">
+                    <p>______</p><br/>
+                    <p class="p-detail">[[hotel.short_description]]</p></div> 
+                    <div class="readon">
+                        <a ng-href="mailto:[[hotel.email]]" class="btn btn-primary">Contact us</a>
+                    </div>
+            </div>
+    </div>
+    </div>  
+</section>
+<section class="container end-banner" id="gallery"> 
+<div id="galleryCarousel" class="carousel slide" data-ride="carousel">
+  <!-- Indicators 
+  <ol class="carousel-indicators">
+    <li ng-repeat="gallery in hotel.photos"  data-target="#galleryCarousel" data-slide-to="$index" ng-class="{active:!$index}"></li> 
+  </ol>-->
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div ng-class="{active:!$index}" ng-repeat="gallery in hotel.photos" class="item">
+      <img ng-src="[[gallery.large]]" alt="gallery hotel">
+    </div> 
+     
+  </div>
+
+  <!-- Left and right controls -->
+  <a class="left carousel-control" href="#galleryCarousel" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#galleryCarousel" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+ </section>
+ {% include footer.html %} 
+ {% include booking-widget.html %}
+ </div>
+</body>
+
+</html>

@@ -1,0 +1,164 @@
+/*Weddings page styles here*/
+
+.cyprus{
+
+	.Cyprusmap{
+		text-align: center;
+		 height: 540px; 
+		 .locName{ 
+		 	  text-align: center;
+		 	  margin-bottom: -30px;
+		 	  font-size: 14px; font-family:"Futura LT W01 Bold";
+		 }
+	}
+	.cyprus-title{font-family:"GoudyOldStyleBTW01-Bold1120138"; margin: 60px; letter-spacing: 0.08em;}
+	.padd-36{ padding:70px 0;}
+	.carousel-inner{ 
+		.item{ 
+			.carousel-caption{
+				bottom: calc(50% - 60px);	
+			}
+		}
+	}
+	.box-content{
+		padding:50px 75px 30px;
+		@media( max-width: $phone-max){
+		 padding:50px 20px 20px 20px;
+		}
+		p{ max-width:660px; margin:0 auto; line-height:26px;}
+ 
+
+	}
+	.weddings-bx{
+		  p {
+		    font-size: 16px;
+		    font-family: 'GoudyOldStyleBTW01-Bold1120138', serif;
+		    max-width: 360px;
+		    text-align: left;
+		    margin: 0px 0px;
+		}
+	}
+	.history{ 
+		background-image: url('/images/cyprus/statue.png'); background-position: bottom right; background-repeat: no-repeat;
+			  h3{font-family:"GoudyOldStyleBTW01-Bold1120138" !important;}
+			  h4{
+			  	 text-transform: uppercase; font-size: 12px; font-family:"Futura LT W01 Bold"; letter-spacing: 0.18em; 
+			     margin-bottom: 60px;
+			  }
+			  p{
+			  	 margin:0px 0px 20px 0px; max-width: 375px;
+			  }
+		}
+    .visit-content{
+    	 padding:50px 75px 30px;
+          @media( max-width: $phone-max){
+			padding:50px 20px 20px 20px;
+		}
+    	 h2{
+    	 	text-align: center; text-transform: uppercase; font-size: 14px; font-family:"Futura LT W01 Bold"; letter-spacing: 0.18em; 
+    	 	margin-bottom: 70px;
+    	 }
+    	 p{
+    	 	line-height: 22px;
+    	 }
+
+    }
+
+	.readon{ padding:30px 0 0;}
+	.details-tabs{ margin:0 auto;
+		.container{ width:100%;}
+		.carousel-holder{
+			.item{
+				height:874px !important;
+				@media( max-width: 1400px){
+                height:600px !important;
+				} 
+				@media( max-width: $optional){
+                height:600px !important;
+				} 
+				@media( max-width: $phone-max),(max-width: $tablet){
+					height:340px !important;
+				}
+				img{ max-height:874px; height: 100%; width: 100%;}
+			}	
+		}
+		.carousel-detail{
+			max-width:510px;
+			padding:70px;
+			h2{
+				font-family: 'GoudyOldStyleBTW01-Bold1120138', serif;
+				font-size: 24px;
+				-webkit-font-smoothing: antialiased;
+				-moz-osx-font-smoothing: grayscale;
+				color: #292929;
+				line-height: 28px;
+				padding: 0px;
+				margin: 0px;
+				letter-spacing: 0.06em;
+			}
+			h3{
+				font-family: "Futura LT W01 Bold";
+				padding: 10px 0px 65px;
+				font-size: 12px;
+				text-transform: uppercase;
+				line-height: 22px;
+				letter-spacing: 0.20em;
+			}
+			p{
+				font-size: 16px;
+    			font-family: 'GoudyOldStyleBTW01-Bold1120138', serif;
+				line-height:26px;
+				padding:0px;
+			}
+		}
+	}
+	.blue-div{ background:url(../images/weddings/blue-div-bg.jpg) repeat; height:105px; width:100%; text-align:center;
+		img{ margin-top:25px;}
+	}
+
+	.experience{
+		  div{
+		  	  position: relative;
+
+		  	  .button-primary{
+		  	  	 position: absolute;
+		  	  	 background: #fff;
+		  	  	 padding:8px 20px;
+		  	  	 font-size: 16px;
+		  	  	 cursor: pointer;
+		  	  	 text-decoration: none;
+		  	  	 top: 50%;
+		  	  	 top: -webkit-calc(50% - 20px);
+                 top: -moz-calc(50% - 20px);
+                 top: calc(50% - 20px);
+                 left: 30%;
+                 left: -webkit-calc(50% - 80px);
+                 left: -moz-calc(50% - 80px);
+                 left: calc(50% - 80px);
+                 min-width: 160px;
+                 text-align: center;
+                 color: #333; 
+                 transition: all 0.5s ease 0s;
+                 opacity: 1;
+                 border: 1px solid #fff;
+                 text-transform: uppercase;
+                 &:hover{ 
+                          opacity: 0.75; 
+                          border: 1px solid #fff;
+                        }
+		  	  }
+		  }
+	}
+
+	.col-listing{
+		padding: 60px 0px;
+		 h3{
+		 	text-align: center; text-transform: uppercase; font-size: 14px; font-family:"Futura LT W01 Bold"; letter-spacing: 0.18em; 
+		    margin-bottom: 60px;
+		 }
+		 h4{
+		 	 font-family: 'GoudyOldStyleBTW01-Bold1120138', serif;
+		 	 margin: 20px 0px 10px 0px;
+		 }
+	}
+}

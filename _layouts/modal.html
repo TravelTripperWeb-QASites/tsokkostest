@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+{% include head.html %}
+<body>
+
+{% include header.html %}
+
+<!--Modal example here-->
+<section class="modal-example inner-banner">
+    <!-- Button trigger modal -->
+    <div class="readon">
+     	<a type="button" data-toggle="modal" data-target="#myModal" class="btn btn-primary">Launch Modal</a>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog container" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+          	<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <div class="row">
+            	<div class="col-md-6 no-padding"><img src="../images/details/modal_img1.jpg" alt=""/></div>
+                <div class="col-md-6 padd">
+                	<h2>Why Book Direct?</h2>
+                    <ul>
+                    	<li>
+                        	<p>
+                            	<b>01 / Secure & Easy</b>
+								Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Cum sociis natoque penatibus et magnis.
+                            </p>
+                        </li>
+                        <li>
+                        	<p>
+                            	<b>02 / Guaranteed Reservation</b>
+								Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Cum sociis natoque penatibus et magnis.
+                            </p>
+                        </li>
+                        <li>
+                        	<p>
+                            	<b>03 / Exclusive Promotions</b>
+								Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Cum sociis natoque penatibus et magnis.
+                            </p>
+                        </li>
+                        <li>
+                        	<p>
+                            	<b>04 / Best Rate Guarenteed</b>
+								Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Cum sociis natoque penatibus et magnis.
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+{% include footer.html %}
+{% include scripts.html %}
+</body>
+</html>

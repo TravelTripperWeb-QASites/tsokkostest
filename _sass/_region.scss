@@ -1,0 +1,255 @@
+.region-tab{
+
+	  ul{
+	  	list-style-type:none;
+	  	float:none;
+	  	padding:0px;
+	  	margin:0px;
+	  	width:100%;
+	  	display:block;
+	  	clear: left;
+	  	 li{
+             display:inline-block; 
+             float:left; 
+             text-align:center;
+             margin-right:3px;
+			 border:0px;
+             /*width:32.993%;
+             padding:20px;*/
+             @media(max-width: $phone-max){
+             	width:32.89%;
+             	padding:20px 8px;
+             	min-height:30px;
+             }
+             @media(max-width: $low-mobile){
+             	width:32.89%;
+             	padding:20px 6px;
+             	margin-right:2px;
+             	min-height:78px;
+             	
+             }
+              
+             
+             background:#f0f1f5;
+             &:last-child{
+             	 margin-right:0px;
+             }
+	  	 	 a{
+                border:0px;
+                color:$text-color;
+                padding:20px 51.5px;
+                @media(max-width: $phone-max){
+                	font-size:11px;
+					padding: 5px 25px 0px;
+                }
+                font-size:12px;
+                letter-spacing: 0.09em;
+                text-decoration:none;
+                text-transform:uppercase; 
+				&:hover, &:focus{ border:0px; background:inherit;}  
+	  	 	 } 
+	  	 }
+	  	 li.active{
+                	background:$white;
+					a{border:0px;
+						&:hover, &:focus{ border:0px; background:inherit;}
+					}
+					
+					
+                }
+	  }
+	  .details{
+	  	  background:$white;
+	  	  padding:40px 50px;
+		  height: 379px;
+    	  overflow: auto;
+
+          @media(max-width: $phone-max){
+          	 padding:40px 30px;
+          }
+	  	  p{
+	  	  	font-family:'GoudyOldStyleBTW01-Roma';
+	  	  	font-size:22px; 
+	  	  	@media(max-width: $phone-max){
+	  	  		font-size:18px; 
+	  	  	}
+	  	  }
+	  	  .view-more{
+                   padding:30px 20px 50px 20px;
+                   position:relative;
+                   font-family:"Futura LT W01 Bold";
+                   text-transform:uppercase;
+                   font-size:12px;
+                   letter-spacing:0.12em;
+                   a{
+                   	color:$text-color;
+                   	padding:20px;
+                   	text-decoration:none; 
+	                   	&:after{ 
+	                   		    content: "\f107";
+    							font-family: FontAwesome;
+   								font-style: normal;
+                                font-weight: normal;
+                                text-decoration: inherit;
+                                position:absolute;
+                                bottom:0px; 
+                                left:50%;
+                                font-size:34px;
+                                color:$blue;
+	                   	}
+                   }
+	  	  	}
+	  }
+}
+
+.short-detail{
+	padding:30px 45px;
+	@media(max-width: $tablet){
+		padding:10px 10px 10px 10px;
+		.responsive-img{ 
+			display:block;
+		}
+	}
+	@media(max-width: $break-small){
+		padding:30px 25px 20px 25px;
+	}
+	
+
+	h3{
+		font-family:"Futura LT W01 Bold";
+		font-size:12px;
+		line-height:21px;
+		 
+	}
+	.contact{
+			padding-top:10px;
+			@media(max-width: $tablet){
+				padding-top:0px;
+			}
+		}
+	p{
+		font-size:12px;
+		line-height:20px;
+		letter-spacing:0.09em;
+		a{
+			color: $text-color;
+			text-decoration: none;
+		}
+	}
+}
+.title-18{
+	font-size:18px;
+	margin-bottom:40px;
+	font-family:"Futura LT W01 Bold";
+	letter-spacing:0.09em;
+}
+.hotel-list{
+	 margin:20px 0px;
+}
+.btn-group-nav{
+	margin-top:20px;
+	 padding:45px;
+	 @media(max-width: $phone-max){
+		padding:0px 25px 20px 45px;
+		margin-top:0px;
+	}
+	@media(max-width: $tablet){
+		padding:0px 15px 0px 0px;
+		margin-top:0px;
+	}
+	@media(max-width: $break-small){
+		padding:0px 15px 25px 0px;
+		margin-top:0px;
+	}
+	 text-align:center;
+    .btn.btn-primary{
+    	 margin-bottom:10px;
+		  min-width:172px;
+		  @media(max-width: $tablet){
+		  	min-width:152px;
+		  	padding:6px 10px;
+		  	display: initial;
+		  }
+		  @media(max-width: $break-small){
+		  	min-width:172px;
+		  	padding:15px;
+		  	display: inline-block; 
+		  }
+		  
+	}
+}
+
+.owl-gallery{
+
+
+	      .owl-nav > div {
+			  margin-top: -26px;
+			  position: absolute;
+			  top: 50%;
+			  color: #cdcbcd;
+			}
+
+			.owl-nav i {
+			  font-size: 26px;
+			  background:$white;
+			  padding:10px 20px;
+			}
+
+			.owl-nav .owl-prev {
+			  left: 90px;
+			}
+
+			.owl-nav .owl-next {
+			  right: 90px;
+
+			}
+
+			.caption{  
+				        position:absolute;
+				        top:calc(50% - 150px);
+				        width:100%; 
+				        text-align:center;
+				        left: 0px;
+				    	padding:20px 0px;
+				    	text-align:center;
+				    	h3{
+				    		font-family:"Futura LT W01 Bold";
+				    		padding: 0px 20px 20px 20px;
+				           font-size:72px;
+				           line-height:90px;
+				           max-width:640px;
+				           margin:0 auto;
+				           text-transform:uppercase;   
+				           letter-spacing:0.20em;
+						   
+							@media(max-width: $phone-max){
+								font-size:32px;
+								line-height:38px;
+								padding-top:20px;
+							}
+				          } 
+				          .white-text{
+				           	 color:$white;
+				           }
+
+
+				    }
+				    .btn.btn-secondary{
+						    	 margin-bottom:10px;
+								 min-width:172px;
+								 background:$text-color;
+								 border-radius:0px !important;
+								 color:$white; 
+								 text-transform:uppercase;
+								 letter-spacing:0.2em;
+								 padding:10px 15px;
+								 font-size:12px;
+								 margin-top:50px;
+							}
+					
+}
+#hotels{
+						@media(max-width: $phone-max){
+							.padd-36{ padding:0px;}
+							}
+						}

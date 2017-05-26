@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html ng-app="protarasApp">
+
+  {% include head.html %}
+
+  <body>
+ <div  ng-controller="protarasCtrl">
+    {% include header.html %}
+
+<section class="top-sec" style="background-image: url('/images/region-lisiting-sea-banner.jpg');">
+   <div class="container no-padding">
+       <div class="breadcrumb-nav">  
+  
+            
+         
+          <ol class="breadcrumb">
+             <li><a href="/">Home</a></li> 
+             <li class="active">Paphos</li>
+          </ol>
+       </div>
+
+      {% region paphos_map %}
+      <div class="col-md-6 no-margin">
+         <div class="region-tab">
+                <ul class="clearfix nav nav-tabs" role="tablist">  
+                    <li role="presentation"><a href="/hotels-in-ayianapa/">Ayia Napa (6)</a></li>
+                    <li role="presentation"><a href="/hotels-in-protaras/">Protaras (19)</a></li>
+                    <li  class="active"  role="presentation"><a href="/hotels-in-paphos/">Paphos (2)</a></li> 
+                </ul>
+              <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active" id="paphos">
+                    <div class="details text-center" style="padding: 30px 20px;">
+                       
+                       {% region paphos_description %}
+        
+                       <div class="view-more">
+                         <a data-scroll href="#hotels">View Hotels in Paphos</a>
+                       </div>
+                    </div>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="ayianapa">
+                    <div class="details text-center">
+                       <p>Ayia Napa detail here...</p>
+        
+                       <div class="view-more">
+                         <a data-scroll href="#hotels">View Hotels in Ayia Napa</a>
+                       </div>
+                    </div>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="protaras">
+                    <div class="details text-center">
+                       <p>Protaras detail here...</p>
+        
+                       <div class="view-more">
+                         <a data-scroll href="#hotels">View Hotels in Protaras</a>
+                       </div>
+                    </div>
+                </div>
+             </div>
+         </div>
+      </div>
+
+   </div> 
+</section>
+ 
+ 
+ <section id="hotels" class="scrollme">
+  <div class="container no-padding">
+   <div class="padd-36 text-center">
+      <h4 class="title-18">OUR EXCLUSIVE HOTELS </h4>
+      
+       <div ng-repeat="hotel in HotelLists | filter :  {address: {state : 'Paphos'}}  | orderBy: 'name' " class="row hotel-list grey-bg no-padding">
+         <div class="col-sm-6 col-md-4 no-padding no-margin">
+          <div class="image-wrap"><img  ng-src="[[hotel.lead_photo.thumb_yankee_jumbo]]"  class="responsive-img" alt="tossokos ascos carol beach">
+          </div>
+         </div>
+         <div class="col-sm-6 col-md-8">
+             <div class="col-sm-12 col-md-7 no-padding no-margin text-left">
+               <div class="short-detail">
+               <h3> [[hotel.name]]</h3>
+                <p>[[hotel.description  | limitTo: 200]]...
+                </p>
+
+                <h3 class="contact">Contact</h3>
+                <p><a ng-href="tel:[[hotel.phone_number]]">[[hotel.phone_number]]</a>
+                </p>
+               </div>
+             </div>
+             <div class="col-sm-12 col-md-5 no-padding no-margin text-center">
+                    <div class="btn-group-nav readon">
+                      <a ng-href="/hotel/[[hotel.name | spaceDash]]/" class="btn btn-primary">View This Hotel</a> 
+                      <a ng-href="[[hotel.website]]/search?arrival_date=[[minDate]]&departure_date=[[maxDate]]" target="_blank" class="btn btn-primary">Book Now</a> 
+                    </div>
+             </div>
+         </div>
+       </div>
+ 
+
+
+   </div> 
+  </div>
+ </section>
+ 
+
+<section class="grey-bg">
+    <div class="container-fluid no-margin no-padding">
+               <div id="owl-gallery" class="owl-carousel owl-gallery">
+                <div class="item">{% region carousal_paphos_cottilionroom_img %}
+                    <div class="caption">
+                      <h3 class="white-text">Welcome to Paphos</h3>
+                       <a show-booking-widget class="btn btn-secondary">RESERVE NOW</a> 
+                    </div>
+                </div>
+                <div class="item">{% region carousal_paphos_gardenroom_img %}
+                    <div class="caption">
+                     <h3 class="white-text">Welcome to Paphos</h3>
+                       <a show-booking-widget class="btn btn-secondary">RESERVE NOW</a> 
+                    </div>
+                </div> 
+
+              </div>
+    </div>
+</section>
+
+{% include weddings-section.html %} 
+ </div>
+
+    {% include footer.html %}
+   {% include scripts.html %}
+   {% include booking-widget.html %}
+  </body>
+
+</html>

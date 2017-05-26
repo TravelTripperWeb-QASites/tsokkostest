@@ -1,0 +1,167 @@
+
+<div class="booking-widget" ng-controller="bookingWidget as widget" my-directive rt3-rooms-browser="browser" rt3-search-form="search" on-search-changed="browser.search()" ng-cloak>
+
+  <form id="booking-form" action="https://tsokkos.reztrip.com/?search"  method="get">
+    <input type="hidden" id="inArea" name="area" value="">
+    <div class="booking-widget_header">
+      <div class="booking-widget_close">&times;</div>
+      <h3 class="booking-widget_title">Your Booking</h3> 
+    </div>
+    <div class="booking-widget_content">
+
+      <!-- View Existing Reservation 
+      <div class="booking-widget_accord -unindents">
+        <div class="booking-widget_accord_toggler">
+          <h3 class="booking-widget_accord_title">View Existing reservation</h3>
+        </div>
+        <div class="booking-widget_accord_content">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam ea nostrum animi, inventore, asperiores cumque aliquid tenetur? Rerum, sunt. Similique inventore ipsam, ratione accusantium odit totam est numquam in quas.
+        </div>
+      </div>
+    -->
+      <!-- Rooms, Adults, Children -->
+      <div class="bookin-widget_parameters">
+        <div class="bookin-widget_parameters_content">
+          <div class="bookin-widget_parameters_select-group"> 
+           <select id="selecthotel" name="hotel_id" ng-options="hotel as hotel.name group by hotel.region  for hotel in HoteldropLists track by hotel.hturl" class="bk-select" ng-model="myhotel" ng-change="widget.selectedhotel(myhotel)">
+                <option value=""> ------ Select a hotel -------</option>
+               
+
+             </select>
+
+
+          </div>
+          </div>
+          </div>
+      <!-- Flexible dates -->
+      <a href="https://tsokkos.reztrip.com/calendar" class="booking-widget_flexible-dates">
+        Flexible Dates
+        <span class="booking-widget_flexible-dates_icon"></span>
+      </a>
+
+      <!-- Check In, Check Out Calendars -->
+        <!-- Check In, Check Out Calendars -->
+      <div class="booking-widget_accord -first">
+        <div class="booking-widget_accord_toggler">
+          <div class="booking-widget_calendar">
+            <span class="booking-widget_calendar_icon">Select Check in</span>
+            <div class="booking-widget_calendar_input">
+              <input type="text" name="arrival_date" value="[[search.params.arrival_date | date:'yyyy-MM-dd']]">
+            </div>
+          </div>
+        </div>
+        <div class="booking-widget_accord_content">
+          <div id="departure" ng-change="widget.chachgeMinDate('departure')" ui-date="[[widget.arrivalOptions]]" ng-model="search.params.arrival_date" ui-date-format="yy-mm-dd"></div>
+        </div>
+      </div>
+      <p class="booking-widget_calendar_error-text">Please select your check in date</p>
+      <div class="booking-widget_accord">
+        <div class="booking-widget_accord_toggler">
+          <div class="booking-widget_calendar">
+            <span class="booking-widget_calendar_icon">Select Check out</span>
+            <div class="booking-widget_calendar_input">
+              <input type="text" name="departure_date" value="[[search.params.departure_date | date:'yyyy-MM-dd']]" >
+            </div>
+          </div>
+        </div>
+        <div class="booking-widget_accord_content">
+          <div ui-date="[[widget.departureOptions]]" ng-model="search.params.departure_date" ui-date-format="yy-mm-dd"></div>
+        </div>
+      </div>
+      <p class="booking-widget_calendar_error-text">Please select your check out date</p>
+
+      <!-- Rooms, Adults, Children -->
+      <div class="bookin-widget_parameters">
+        <div class="bookin-widget_parameters_content">
+          <div class="bookin-widget_parameters_select-group">
+           
+            <select name="adults[]" id="adults" ng-model="browser.params.adults">
+              <option value="1" >1 Adult</option>
+              <option value="2" ng-selected="true" selected>2 Adults</option>
+              <option value="3">3 Adults</option>
+            </select>
+
+            <select name="children[]" id="children" ng-model="browser.params.children">
+              <option value="0" ng-selected="true">0 Children</option>
+              <option value="1">1 Children</option>
+              <option value="2">2 Children</option>
+            </select>
+          </div>
+          <p class="bookin-widget_parameters_description">*under the age of 12</p>
+        </div>
+      </div>
+
+      <!-- View Special Rates -->
+      <div class="booking-widget_accord">
+        <div class="booking-widget_accord_toggler">
+          <h3 class="booking-widget__special-rates_title">View Special Rates</h3>
+        </div>
+        <div class="booking-widget_accord_content">
+          <div class="booking-widget_special-rates">
+                 <!-- <ul class="booking-widget_special-rates_list">
+        <li>
+                <label class="booking-widget_special-rates_radio">
+                  <input type="radio" name="rate_code" checked="checked" value="No Thanks">
+                  <span class="booking-widget_special-rates_radio-icon"></span>
+                  <span class="booking-widget_special-rates_radio_title">No Thanks</span>
+                </label>
+              </li>
+              <li>
+                <label class="booking-widget_special-rates_radio">
+                  <input type="radio" name="rate_code" value="No Thanks">
+                  <span class="booking-widget_special-rates_radio-icon"></span>
+                  <span class="booking-widget_special-rates_radio_title">Offer Code</span>
+                  <input type="text" name="offer_code">
+                </label>
+              </li>
+            </ul>--> 
+						<ul class="booking-widget_special-rates_list" rt3-special-rates="rates">
+              <li ng-repeat="rate in rates.special_rates">
+                <label class="booking-widget_special-rates_radio">
+                  <input type="radio" name="rate_code" value="[[rate.rate_plan_code]]">
+                  <span class="booking-widget_special-rates_radio-icon"></span>
+                  <span class="booking-widget_special-rates_radio_title">[[rate.rate_plan_name | filterHtmlChars]]</span>
+                </label>
+              </li>
+            </ul>
+            <!--
+            <label class="booking-widget_special-rates_iata">
+              <span>IATA Code</span>
+              <div class="booking-widget_special-rates_iata_input">
+                <input type="text" name="iata_code">
+              </div>
+            </label>-->
+          <!--  <a href="#" class="booking-widget_special-rates_button">Enter</a>-->
+          </div>
+        </div>
+      </div>
+
+      <!-- Rates -->
+      <div class="booking-widget_rate">
+        <!--div class="booking-widget_rate_content">
+          <div class="booking-widget_rate_col -title">
+           Nightly<br>Rate
+          </div>
+          <div class="booking-widget_rate_col -count">
+           [[ browser.getRate ]]
+          </div>
+        </div-->
+        <button type="submit" class="booking-widget_rate_button">Book now</button>
+      </div>
+
+      <!-- Footer -->
+      <div class="booking-widget_footer">
+        <p>Need booking assistance? Here are a few quick ways we can help:</p>
+        <nav class="booking-widget_footer_links">
+          <a href="mailto:reservations@tsokkos.com" class="booking-widget_footer_links_item -email">Via Email</a> [[foo1]]
+          <!--<a href="/" class="booking-widget_footer_links_item -contacts">See more Contact Details</a>
+          <a href="/" class="booking-widget_footer_links_item -reservation">View existing Reservation</a>-->
+        </nav>
+      </div>
+    </div>
+  </form>
+</div>
+
+<script>
+$(document).ready(function(){$("#selecthotel").on("change",function(){var t=$("#selecthotel option:selected").val();""===t?$("#booking-form").attr("action","https://tsokkos.reztrip.com/?search"):"https://tsokkos.reztrip.com/?search&area=aiya+napa"===t?($("#booking-form").attr("action","https://tsokkos.reztrip.com/?search"),$("#inArea").val("aiya+napa")):"https://tsokkos.reztrip.com/?search&area=paphos"===t?($("#booking-form").attr("action","https://tsokkos.reztrip.com/?search"),$("#inArea").val("paphos")):"https://tsokkos.reztrip.com/?search&area=protaras"===t?($("#booking-form").attr("action","https://tsokkos.reztrip.com/?search"),$("#inArea").val("protaras")):($("#booking-form").attr("action",t),$("#inArea").val(""))});var t=window.location.pathname,o=t.split("/"),a=o[o.length-2],e=a.replace(/-/g," ");$.getJSON(location.protocol+"//"+location.hostname+(location.port?":"+location.port:"")+"/js/listing.js",function(t){$.each(t.hotelsurl,function(t,o){e==o.name?($("#selecthotel option[value='"+o.hturl+"']").attr("selected","selected"),$("#booking-form").attr("action",o.hturl)):"hotels in ayianapa"===e?($("#selecthotel option[label='All Hotels in Ayia Napa']").attr("selected","selected"),$("#inArea").val("aiya+napa")):"hotels in paphos"===e?($("#selecthotel option[label='All Hotels in Paphos']").attr("selected","selected"),$("#inArea").val("paphos")):"hotels in protaras"===e&&($("#selecthotel option[label='All Hotels in Protaras']").attr("selected","selected"),$("#inArea").val("protaras"))})})});
+</script>

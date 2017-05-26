@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html ng-app="protarasApp">
+{% include head.html %}
+
+<body class="weddings">
+{% include header.html %}
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel"> 
+  
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active"> {% region header_image %}
+      <div class="carousel-caption">
+        {% region header_image_text %}
+        <!--<p><a class="btn btn-lg btn-primary" href="" role="button">Discover This Hotel</a></p>-->
+      </div>
+    </div>
+  </div>
+</div>
+<section>
+  <div class="container">
+    <div class="padd-36 text-center">
+      {% region life_together_begin %}
+    </div>
+  </div>
+</section>
+<section>
+  <div class="container-fluid no-margin">
+    <div class="row no-margin equal">
+      <div class="col-sm-6 no-margin "> {% region weddings_image_1 %}</div>
+      <div class="col-sm-6 no-margin "> {% region weddings_image_2 %}</div>
+      <div class="col-sm-12 no-margin ">{% region weddings_image_3 %}</div>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="container">
+    <div class="padd-36 text-center">
+      {% region dream_wedding_come_true %}
+    </div>
+  </div>
+</section>
+<section class="details-tabs">
+	<div class="container">
+        <div class="row grey-bg">
+            <div class="col-md-6 col-xs-12  carousel-holder no-margin">
+              <!--Carousel starts here-->
+                  	<div id="rooms-carousel" class="carousel slide" data-ride="carousel">
+                      <!-- Indicators -->
+                      <ol class="carousel-indicators">
+                        <li data-target="#rooms-carousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#rooms-carousel" data-slide-to="1"></li>
+                        <li data-target="#rooms-carousel" data-slide-to="2"></li>
+                      </ol>
+                    
+                      <!-- Wrapper for slides -->
+                      <div class="carousel-inner" role="listbox">
+                        <div class="item active">{% region wedding_venue_slide_1 %}</div>
+                        <div class="item">{% region wedding_venue_slide_2 %}</div>
+                        <div class="item">{% region wedding_venue_slide_3 %}</div>
+                      </div>
+                    
+                      <!-- Controls -->
+                      <a class="left carousel-control" href="#rooms-carousel" role="button" data-slide="prev">
+                        <span class="fa fa-angle-left" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                      </a>
+                      <a class="right carousel-control" href="#rooms-carousel" role="button" data-slide="next">
+                        <span class="fa fa-angle-right " aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                      </a>
+                    </div>
+                  <!--Carousel Ends here-->
+                   
+             </div>
+            <div class="col-md-6 col-xs-12 p-t-100 no-margin">
+                <div class="carousel-detail">
+                  {% region wedding_venues %}
+              </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+  <div class="container-fluid no-margin">
+    <div class="row no-margin equal">
+     {% region planned_celebration_image %}
+    </div>
+  </div>
+</section>
+<section class="loc-sec grey-bg">
+  <div class="container padd-60 text-center">
+    {% region planned_celebrations %}
+  </div>
+</section>
+<section>
+  <div class="container-fluid no-margin"> 
+  	<div class="row no-margin">
+      <div class="col-sm-3 col-xs-6 no-margin">{% region wedding_page_bottom_image1 %}</div> 
+      <div class="col-sm-3 col-xs-6 no-margin">{% region wedding_page_bottom_image2 %}</div> 
+      <div class="col-sm-3 col-xs-6 no-margin">{% region wedding_page_bottom_image3 %}</div> 
+      <div class="col-sm-3 col-xs-6 no-margin">{% region wedding_page_bottom_image4 %}</div>
+      <div class="col-sm-3 col-xs-6 no-margin">{% region wedding_page_bottom_image5 %}</div> 
+      <div class="col-sm-3 col-xs-6 no-margin">{% region wedding_page_bottom_image6 %}</div> 
+      <div class="col-sm-3 col-xs-6 no-margin">{% region wedding_page_bottom_image7 %}</div> 
+      <div class="col-sm-3 col-xs-6 no-margin">{% region wedding_page_bottom_image8 %}</div>
+    </div>
+  </div>
+</section>
+<section class="blue-div"><img src="../images/weddings/logo_white.png" width="170" height="52" alt=""/></section>
+ 
+
+{% include footer.html %}
+   {% include scripts.html %}
+    {% include booking-widget.html %}
+</body>
+</html>

@@ -1,1 +1,0 @@
-<span style="color:{{include.instance.color}};">{{include.instance.text}}</span>

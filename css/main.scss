@@ -1,0 +1,107 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+@font-face{
+font-family:"Clearface ITC W01";
+src:url("../fonts/5471df1e-cd9b-48d2-a036-e3f16fe8a703.eot?#iefix");
+src:url("../fonts/5471df1e-cd9b-48d2-a036-e3f16fe8a703.eot?#iefix") format("eot"),url("../fonts/8aa3b9b6-977a-468e-bb5f-2f3aa9766d27.woff2") format("woff2"),url("../fonts/77725e72-fbdd-4dad-b520-a935dc9747c5.woff") format("woff"),url("../fonts/321aa829-e1df-4f30-a7f7-a27923ec9f2a.ttf") format("truetype"),url("../fonts/f18d06e2-b0dc-4032-9598-1f0288eb0cc2.svg#f18d06e2-b0dc-4032-9598-1f0288eb0cc2") format("svg");
+}
+@font-face{
+font-family:"Futura LT W01 Book";
+src:url("../fonts/cf053eae-ba1f-44f3-940c-a34b68ccbbdf.eot?#iefix");
+src:url("../fonts/cf053eae-ba1f-44f3-940c-a34b68ccbbdf.eot?#iefix") format("eot"),url("../fonts/8bf38806-3423-4080-b38f-d08542f7e4ac.woff2") format("woff2"),url("../fonts/e2b9cbeb-fa8e-41cd-8a6a-46044b29ba52.woff") format("woff"),url("../fonts/c2a69697-4f06-4764-abd4-625031a84e31.ttf") format("truetype"),url("../fonts/dc423cc1-bf86-415c-bc7d-ad7dde416a34.svg#dc423cc1-bf86-415c-bc7d-ad7dde416a34") format("svg");
+}
+@font-face{
+font-family:"Futura LT W01 Bold";
+src:url("../fonts/87f56fc1-ab05-4355-90af-9e83740663af.eot?#iefix");
+src:url("../fonts/87f56fc1-ab05-4355-90af-9e83740663af.eot?#iefix") format("eot"),url("../fonts/3cf9e1e8-63a2-497f-86ed-6b63d6de1986.woff2") format("woff2"),url("../fonts/184895ac-545b-450b-9d3a-c0a0a7620977.woff") format("woff"),url("../fonts/bf8628d2-1ae0-4645-ba3f-3ce62d8d907c.ttf") format("truetype"),url("../fonts/20073de8-56dd-4e4c-9434-5097c3f2fd28.svg#20073de8-56dd-4e4c-9434-5097c3f2fd28") format("svg");
+}
+@font-face{
+font-family:"GoudyOldStyleBTW01-Roma";
+src:url("../fonts/e10b5095-f533-4a81-969f-31fb34420549.eot?#iefix");
+src:url("../fonts/e10b5095-f533-4a81-969f-31fb34420549.eot?#iefix") format("eot"),url("../fonts/f0551d09-2601-42f5-84d8-04d4cc3e191b.woff2") format("woff2"),url("../fonts/306cb33f-6965-419e-8279-fa7e8bb4ac1b.woff") format("woff"),url("../fonts/100ab2fa-9828-4193-87e4-1eb0d4984107.ttf") format("truetype"),url("../fonts/d8c0c858-9f59-4b51-ae25-e01509e5b521.svg#d8c0c858-9f59-4b51-ae25-e01509e5b521") format("svg");
+}
+@font-face{
+font-family:"GoudyOldStyleBTW01-Bold1120138";
+src:url("../fonts/8d44f700-a923-4a03-b7b4-4f7424d8a4b7.eot?#iefix");
+src:url("../fonts/8d44f700-a923-4a03-b7b4-4f7424d8a4b7.eot?#iefix") format("eot"),url("../fonts/fae06e2d-01b0-44c1-b593-04f3c767ebab.woff2") format("woff2"),url("../fonts/bc2acff5-7142-4e1b-830e-b30d6fc850d5.woff") format("woff"),url("../fonts/93fd7f83-6c34-43fc-bdad-b8b3b5f4015f.ttf") format("truetype"),url("../fonts/c2125fd2-ceae-459b-bd9a-8489fe73d39c.svg#c2125fd2-ceae-459b-bd9a-8489fe73d39c") format("svg");
+}
+
+
+
+// Our variables
+$base-font-family: "Futura LT W01 Book";
+$base-font-size:   16px;
+$base-font-weight: 400;
+$small-font-size:  $base-font-size * 0.875;
+$base-line-height: 1.5;
+
+$spacing-unit:     30px;
+
+$text-color:       #292929;
+$background-color: #fdfdfd;
+$brand-color:      #2a7ae2;
+
+$white:            #ffffff;
+$black:            #000000;
+$menucolor:        #434343;
+$link-color:       #1f75bb;
+$blue:             #287cbe;
+$btn-black:        #3e4440;
+$grey-color:       #dddddd;
+$grey-color-light: lighten($grey-color, 40%);
+$grey-color-dark:  darken($grey-color, 25%);
+
+// Width of the content area
+$content-width:    800px;
+
+$on-palm:          600px;
+$on-laptop:        800px;
+
+$tablet:          768px; 
+$mobile:          767px;
+$break-small:     479px;
+$optional:        1140px;
+$low-point:       320px;
+$phone-max:       479px;
+$low-mobile:       415px;
+
+$defaultfont: 14px;
+$textsize:1.12em;
+
+// Use media queries like this:
+// @include media-query($on-palm) {
+//     .wrapper {
+//         padding-right: $spacing-unit / 2;
+//         padding-left: $spacing-unit / 2;
+//     }
+// }
+@mixin media-query($device) {
+    @media screen and (max-width: $device) {
+        @content;
+    }
+}
+
+
+
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import
+        "bootstrap",
+        "font-awesome", 
+        "nav",
+        "layout",
+        "home",
+        "owl.carousel", 
+        "region",
+		"details",
+		"modal",
+        "booking-widget",
+        "jquery-ui",
+        "datepicker",
+		"weddings",
+        "cyprus",
+        "rfp"
+
+;

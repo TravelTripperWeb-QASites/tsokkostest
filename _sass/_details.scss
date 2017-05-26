@@ -1,0 +1,592 @@
+/*For details page*/
+.p-70{ padding:70px;
+	@media(max-width: $phone-max),(max-width: $tablet){
+				padding:inherit;
+			}
+}
+.p-t-100{ padding-top:100px;
+	@media(max-width: $phone-max),(max-width: $tablet){
+		padding-top:0px;					
+	}
+}
+.p-l-15{ padding-left:15px;}
+.inner-banner{width:100%; height:494px; background-image: url(../images/details/details_banner1.jpg); background-position: bottom center; 	background-repeat: no-repeat; background-size:cover;color:#fff; text-align:center; position:relative;
+	@media(max-width: $phone-max){
+		height:auto;
+	}
+	h2{font-family: 'Clearface ITC W01';font-size: 48px;
+		@media(max-width: $phone-max){
+				padding-top:25px;
+				font-size: 22px;
+			}
+	}
+	h4{letter-spacing: 0.28em;font-size: 13px;font-family: "Futura LT W01 Bold";text-transform: uppercase;padding: 10px 0px;}
+	.nav-tabs{ margin-top: 146px !important; width: 100%; text-align: center; border-bottom: 0px; padding: 0px; margin: 0px; list-style-type:none;
+	      @media(max-width: $phone-max){
+	      	margin-top: 70px; 
+	      }
+
+		li{	  display:inline-block;
+        *display:inline; /*IE7*/
+        *zoom:1; /*IE7*/
+        float: none !important;  
+          
+			a{ background:rgba(255,255,255,0.8); border-radius:0px; padding: 18px 35px; border:0px;font-family:"Futura LT W01 Book"; text-transform:uppercase;color:$menucolor; font-size:13px; letter-spacing:0.08em; margin: 0 0 0 0px;}
+			&.active{
+					a{ background:rgba(255,255,255,1); border:0px !important;
+						&:hover{background:rgba(255,255,255,1);border:0px !important;}
+						&:focus{background:rgba(255,255,255,1);border:0px !important;}
+					}
+				} 
+		}
+		@media(max-width: $phone-max){
+			 
+			li{ display: inline-block;
+				line-height: 40px;
+				width:auto;
+				 a{ background:rgba(255,255,255,0.8); border-radius:0px; padding: 8px 10px; border:0px;font-family:"Futura LT W01 Book"; text-transform:uppercase;color:$menucolor; font-size:10px; letter-spacing:0.02em; margin: 0 0 0 0px;}
+				}
+		}
+	}
+		
+}
+
+.padd30{padding: 30px;}
+.special-offers{
+
+	  .btn-group-nav{
+	  	 margin-top: 60px;
+	  	 padding: 0px;
+	  }
+
+}
+.wdvider{
+	 border-bottom: 20px solid #fff;
+}
+.c-title{
+	  font-size: 24px; letter-spacing: 0.08em; text-align: center; font-family:"Futura LT W01 Bold"; text-transform: uppercase; line-height: 60px;
+}
+
+.offers-box{
+         font-size: 12px; letter-spacing: 0.08em;
+         padding-top: 20px;
+		 .offer-title{
+			font-family: GoudyOldStyleBTW01-Roma;
+			font-size: 13px;
+		}
+}
+
+.arrow_box {
+					position: relative;
+					background: #777777;
+					width:80%;
+					@media(max-width: $phone-max){
+						width: 100%;
+						img{
+							 width: 100%;
+						}
+					}
+				img{       
+					        width: 100%;
+					        max-height: 170px;
+					        @media(max-width: $tablet){
+							max-height: 200px;
+						    }
+						}
+				/*&:after {
+					left: 100%;
+					top: 50%;
+                   @media(max-width: $phone-max){
+                   	    left: 49%;
+						top: 100%;
+						border-width: 0px; 
+
+					}
+					border: solid transparent;
+					content: " ";
+					height: 0;
+					width: 0;
+					position: absolute;
+					pointer-events: none;
+					border-color: rgba(119, 119, 119, 0);
+					border-left-color: #777777;
+					border-width: 12px;
+					margin-top: -12px;
+				}*/
+		   }
+
+
+.details-tabs{
+		
+		h3{font-family: 'GoudyOldStyleBTW01-Bold1120138', serif;margin:0px;padding:60px 0 35px 0; font-size:1.5em;color:$text-color;
+			@media(max-width: $phone-max),(max-width: $tablet){
+				padding:40px 0 30px;
+			}
+		}
+		p{font-family:'GoudyOldStyleBTW01-Roma', Sans-Serif; font-size:$textsize;  padding: 10px 70px 50px 70px;   line-height:1.8em;  color:$text-color;
+			@media(max-width: $phone-max),(max-width: $tablet){
+				padding-left:0px; width:100%;  padding: 20px 20px 20px 20px;  
+			}
+			
+		}
+		.p-t-100{
+                  h3{
+                  	 padding: 50px 70px 20px 50px; letter-spacing: 0.08em;
+                  	 	@media(max-width: $phone-max),(max-width: $tablet){
+                  	 		padding-left:20px;
+                  	 	}
+                  }
+                  p{font-family:'GoudyOldStyleBTW01-Roma', Sans-Serif; font-size:$textsize !important;  padding: 10px  50px;   line-height:1.8em;  color:$text-color;
+						@media(max-width: $phone-max),(max-width: $tablet){
+							  width:100%;  padding: 20px 20px 20px 20px;  
+						}
+						
+					}
+		}
+		.video{ width:450px; height:307px; margin:25px auto 0;
+			img{width:100%;}
+			@media(max-width: $phone-max),(max-width: $tablet){
+				width:100%; height:auto; padding-top:10px;
+			}
+		}
+		.readon{ padding:20px 0 0 50px;
+			@media(max-width: $phone-max),(max-width: $tablet){
+				padding-left:20px; padding-bottom:40px;
+			}
+		}
+		.address-line{ font-family:Futura LT W01 Book; font-size:$defaultfont;color:$text-color; border-top: solid 1px $grey-color; border-bottom:solid 1px $grey-color; padding:5px 30px; margin:0 0 30px; text-align:center; letter-spacing:0.06em;
+			span{font-family:Futura LT W01 Bold;}
+			@media(max-width: $phone-max),(max-width: $tablet){
+				margin:0 15px 30px;
+			}
+			a{
+				color: #333;
+			}
+		}
+		.carousel-holder{
+				.carousel-inner{
+					@media(max-width: $phone-max),(max-width: $tablet){
+							margin-top:0px;
+						}
+					.item{ height:536px !important;
+						@media(max-width: $phone-max){
+								height:340px !important;
+							}
+						img{width:auto; height:auto; max-height:536px;
+							@media(max-width: $phone-max),(max-width: $tablet){
+								width:100%;
+
+							}
+						}
+					}
+				}
+				.carousel-control{ bottom: 0px;top: inherit;background: #ffffff; padding: 15px 0; opacity:0.9; width:60px; text-shadow:none;z-index:99;
+					span{color:#c6c6c6;}
+					&:hover{opacity:1;}
+					&.left{left:40px;}
+					&.right{left:100px;}
+				}
+				.carousel-indicators{bottom:10px; left:220px;
+                     li{
+                     	 margin: 0px 8px;
+                     	 border:2px solid #fff;
+                     }
+				}
+				
+			}
+		.carousel-detail{ 
+			h3{font-family:'Futura LT W01 Book', Sans-Serif; font-size:1.125em; text-transform:uppercase;}
+			p{ font-size:$textsize;}
+			.readon{
+					@media(max-width: $phone-max),(max-width: $tablet){
+							padding-bottom:0px;
+						}
+				}
+		}
+	}
+.banner2{
+	img{ width:100%;}
+	}
+ #map-canvas {
+  height: 100%;
+  margin: 0;
+  padding: 0
+}
+
+#galleryCarousel{
+   max-height: 600px;
+      .carousel-inner{
+
+      	margin-top: 0px;
+      	.item{
+			     	@media( min-width: $mobile){
+			     		max-height: 500px;
+			     	}
+			     	@media( max-width: $tablet){
+			     		max-height: 400px;
+			     	}
+			     	@media( max-width: $phone-max){
+			     		max-height: 250px;
+			     	}
+			     	 max-height: 600px;
+			     	 max-width: 1170px;
+			     	img{     
+			     		      @media( max-width: $mobile){
+						     		max-height: 250px;
+						     	}
+						 	max-height: 600px;
+						 }
+			     }
+      }
+     
+	 
+}
+.divider{ height:5px; border-top:solid 1px $grey-color; border-bottom:solid 1px $grey-color; margin:30px 0}
+.amenities{
+		.p-70{ padding:70px 30px 0;
+			@media(max-width: $phone-max),(max-width: $tablet){
+				padding:inherit;
+			}
+		}
+		.no-padding{padding:0px;
+			@media(max-width: $phone-max),(max-width: $tablet){
+						padding:30px 15px;
+				}
+		}
+		.grey-bg{ background:$grey-color;
+			
+				.holder{ padding:70px;
+					@media(max-width: $phone-max),(max-width: $tablet){
+						padding: 30px 15px 0;
+					}
+				}
+				
+				@media(max-width: $phone-max),(max-width: $tablet){
+						margin:0px;
+				}
+		}
+		h3{font-family:Futura LT W01 Book; font-size:1.125em; text-transform:uppercase; padding-bottom:30px; padding-left:0px; margin:0px;}
+		.listing{ margin:0px; padding: 0px 30px;  list-style-position: inside;
+			li{	list-style:none; padding: 2px 0px; line-height:1.3em;
+				 display:block;
+				 text-indent: -2.1em;
+				font-family:'GoudyOldStyleBTW01-Roma',Sans-Serif; font-size:$defaultfont; letter-spacing: 0.08em;
+				&:before{content: "\2022"; margin-right: 1.5em;}
+				}
+			}
+		.thumbnails{ margin:0px; padding:70px 20px;
+			li{ list-style:none; padding:0px;
+				img{width:100%;}
+			}
+		}
+	}
+.spsl-offers{
+		h4{letter-spacing: 0.2em;font-family: "Futura LT W01 Bold";font-size: 13px; text-transform:uppercase; text-align:center; padding-bottom:30px; font-size:1.125em;}
+		.cont-holder{
+			img{text-align:center; width:100%;}
+			 width:100%; padding:34px;
+			 i{ max-width: 180px; font-family:GoudyOldStyleBTW01-Bold1120138; font-size:1.1em; font-style:normal; padding:30px 0 20px; display:block;}
+			 p{font-family:Futura LT W01 Book; font-size:0.9em; margin-top: 10px; line-height: normal;
+			 	b{font-family:Futura LT W01 Bold; font-weight:normal;}
+			 }
+			 .p-detail{font-family:"GoudyOldStyleBTW01-Roma"; font-size:1.1em;  font-weight: 500; letter-spacing: 0.08em;
+			 }
+			 .readon{ padding:20px 0 0;}
+		}
+		@media(max-width: $phone-max),(max-width: $tablet){
+						.col-xs-12{ margin-bottom:15px;}
+				}
+	}
+.location-detail{ 
+		margin-top:30px;
+		@media(max-width: $phone-max),(max-width: $tablet){
+						margin-top:0px;
+				}
+		.row{ position:relative;
+			.sample-pic{ position:absolute;top:0px; right:0px; width:298px; height:213px;z-index: 2;
+				@media(max-width: $phone-max),(max-width: $tablet){
+					top: 40%;width: 40%;height: 40%;
+				}
+				
+				img{ width:100%;}
+			}
+			.map{ 
+				img{ width:100%;}
+			}
+			.cont-holder{ width:auto; padding-left:70px; max-width:450px;
+				@media(max-width: $phone-max),(max-width: $tablet){
+						padding-left:20px;
+				}
+				i{
+					@media(max-width: $phone-max),(max-width: $tablet){
+						padding-top:0px;
+					}
+				}
+				.quote{font-family:GoudyOldStyleBTW01-Roma; font-size:0.875em;padding:80px 0 20px;}
+			}
+		}
+	}
+.end-banner{margin-bottom:70px;
+	@media(max-width: $phone-max),(max-width: $tablet){
+						margin-bottom:15px;
+				}
+	img{width:100%;}
+	}
+
+
+
+
+/*Others Banner */
+
+.inner-banner-others{width:100%; height:400px; background:url(../images/details/others_banner.jpg) top center; background-size:cover;color:#fff; text-align:center; position:relative;
+	h2{font-family: 'Clearface ITC W01';font-size: 48px;
+		@media(max-width: $phone-max){
+				padding-top:25px;
+			}
+	}
+	h4{letter-spacing: 0.28em;font-size: 13px;font-family: "Futura LT W01 Bold";text-transform: uppercase;padding: 10px 0px;}
+
+	.top-sec{
+
+	   -webkit-background-size: cover;
+	   -moz-background-size: cover;
+	   -o-background-size: cover;
+	   background-position: 50%;
+	   background-repeat: no-repeat;
+	   background-size: cover;
+	   margin: 0 auto;
+	   min-width: 50%;
+	   width:100%;
+	   padding-top:180px;
+
+	   .container{
+	   	 padding-bottom: 60px;
+	   }
+
+	   .breadcrumb{
+	   	  background:none;
+	   	  text-align:center;
+	   	  float:none;
+	   	  > li{
+	   	  	 color:$white;
+	   	  	 font-size:12px;
+	   	  	 letter-spacing:0.08em;
+             a{
+             	color:$white;
+             } 
+             + li:before {
+				    content: "> ";
+				    padding: 0 5px;
+				    color: #fff;
+				}
+	   	    }
+	   	     
+	   }
+}
+	
+		
+}
+
+
+
+/*Others pages*/
+.press, .trms, .faq{
+	padding:30px 0px;
+	@media(max-width: $tablet){
+		padding:10px 10px 10px 10px;
+		.responsive-img{ 
+			display:block;
+		}
+	}
+	@media(max-width: $break-small){
+		padding:30px 0px 20px 0px;
+	}
+	
+
+	h3{
+		font-family:"Futura LT W01 Book";
+		font-size:1.125em;
+		line-height:21px;
+		text-tranfer:uppercse;
+		 
+	}
+	
+
+	h5{
+		font-family:"Futura LT W01 Book";
+		font-size:1.125em;
+		line-height:21px;
+		text-tranfer:uppercse;
+		 
+	}
+
+	p{
+		font-size:12px;
+		line-height:20px;
+		letter-spacing:0.09em;
+	}
+}	
+
+.privacy{
+	
+	padding:30px 0px;
+	
+	@media(max-width: $tablet){
+		padding:10px 10px 10px 10px;
+
+	}	
+
+	p{
+		font-size:12px;
+		line-height:20px;
+		letter-spacing:0.09em;
+		padding:10px 0px;
+	}
+    
+   h5{
+		font-family:"Futura LT W01 Book";
+		font-size:1.125em;
+		line-height:21px;
+		text-tranfer:uppercse;
+		 
+	}
+ 
+	 ol li{
+
+	 padding:5px 0px;
+	 } 
+}
+
+.sitemap{
+	padding:20px 0px;
+	ul{
+      list-style:none;
+      margin:0px;
+      padding:0px;
+	}
+
+	ul li{
+	 line-height:22px;
+	 padding:10px;
+	}
+
+	ul li a:hover{
+	text-decoration:none;
+	}
+
+}
+
+/*Faq*/
+.faq{ 
+ 
+	.accordion-toggle:after {
+	    font-family: 'FontAwesome';
+	    content: "\f078";    
+	    float: right;
+	}
+	.accordion-opened .accordion-toggle:after {    
+	    content: "\f054";    
+	}
+
+	.accordion-group{
+		
+	margin:2px;
+	padding:2px 0px;
+
+	}
+
+
+
+.accordion-heading {
+	
+	border-color: rgba(119, 119, 119, 0);
+	border-width:1px solid;
+	background: #f4f9ff;
+
+
+}
+	.accordion-heading a { 
+	display:block;
+	text-decoration:none;
+	font-weight:500;
+	padding:10px;
+	}
+
+	.accordion-inner{
+		padding:10px;		
+	}
+
+	ul{
+	margin:0px;
+	padding:0px 0px;
+	}
+
+	ul li{ 
+	padding:5px  0px;
+	list-style:none;
+	}
+
+}
+
+
+/*Sitemap*/
+.sitemap{
+	padding:20px 0px;
+	ul{
+      list-style:none;
+      margin:0px;
+      padding:0px;
+	}
+
+	ul li{
+	line-height:20px;
+	padding:5px 5px;
+	font-weight:700;
+	text-transform:uppercase;
+	list-style:disc !important;
+	font-family:"Futura LT W01 Book";
+	letter-spacing:0.10em;
+	font-size:12px;
+	 
+	}
+
+	ul li a{
+
+	color:#777;
+	}
+
+	ul li a:hover{
+	text-decoration:none;
+	}
+
+		ul ul {
+	margin:0px 0px;
+	padding:5px 0px 5px 20px;
+	list-style:bullits
+
+		}
+
+	ul ul li{
+ 		
+ 		font-size:12px;
+ 		font-weight:700;
+ 		}
+
+
+ 	ul ul b{
+ 	padding-left:0px;
+ 	text-tranfer:uppercase !important;
+ 	display:block;
+
+ 	}
+
+
+	ul ul b:befor{
+	content:"";
+	clear:both;
+	display:block;
+	
+	}
+
+}
+

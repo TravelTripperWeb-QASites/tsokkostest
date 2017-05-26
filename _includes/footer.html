@@ -1,0 +1,50 @@
+<footer class="footer">
+  <div class="container">
+
+    <div class="col-md-3">
+       {% for fitems in obj.footer-links %}
+       <h3>{{fitems.name}}</h3>
+       {% endfor %}
+       <p>{{obj.address}}</p>
+    </div>
+    <div class="col-md-3"> 
+       <h3>Contact Details</h3> 
+       <p>T. <a href="tel:{{obj.tel}}">{{obj.tel}}</a></p>
+       <p>T. <a href="tel:{{obj.tel2}}">{{obj.tel2}}</a></p>
+       <p>F. {{obj.fax}}</p>
+       <p>E. <a href="mailto:{{obj.email}}">{{obj.email}}</a></p>
+    </div>
+    <div class="col-md-3">
+        
+       <h3>Newsletter</h3> 
+       <form class="jotform-form" action="https://submit.jotform.me/submit/62093379392464/" method="post" name="form_62093379392464" id="62093379392464" accept-charset="utf-8">
+  <input type="hidden" name="formID" value="62093379392464" />
+       <div class="input-group">
+          <input type="email" required="required" id="input_3" name="q3_email3" class="form-control" placeholder="TYPE YOUR EMAIL" aria-describedby="basic-addon2">
+           <span class="input-group-addon">
+            <button  type="submit"><i class="fa fa-angle-right" aria-hidden="true"></i></button>
+          </span>
+          
+        </div>
+        </form>
+    </div>
+    <div class="col-md-3">
+       
+       <h3>Follow Us</h3> 
+       <p class="social">
+       <a href="https://www.facebook.com/tsokkos.hotels/" target="_blank"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+       <a href="https://plus.google.com/101938285216368951505/posts" target="_blank"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+       <a href="https://www.instagram.com/tsokkoshotels/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+       <a href="https://twitter.com/tsokkos" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+       </p>
+    </div>
+  </div>
+
+</footer>
+<a href="#" id="back-to-top" title="Back to top"><span class="glyphicon glyphicon-chevron-up"></span></a>
+<div class="copyright">
+ <div class="container">
+ {{obj.copyrights}}, All Rights Reserved | <a href="{{ 'Privacy-Policy'|permalink }}">Privacy Policy</a>  |  <!--a href="{{ 'Press'| permalink }}">Press</a>  |--> <a href="{{ 'Terms-Of-Use'|permalink }}">Terms of Use</a>  | <a href="{{ 'Sitemap'|permalink }}">Sitemap</a> | <a href="{{ 'FAQ'|permalink }}">FAQ</a>  
+ </div>
+</div>
+

@@ -1,0 +1,36 @@
+/*Modal styles here*/
+.modal-example{ padding:200px 60px;
+	.modal-dialog{width:1012px; height:auto;
+		@media(max-width: $phone-max),(max-width: $tablet){
+						width:auto; margin:0px;
+				}
+		.modal-content{ box-shadow:none; border:0px; border-radius:0px;
+			.close{position: absolute;top: 0px;right: 0px;background:$black;z-index: 99; color:$white;padding: 0px 7px 5px; opacity:1;
+				&:focus{ border:0px; outline:0px;}
+			}
+			.modal-body{ padding:0px;
+				img{width:100%;}
+				h2{font-size:1.75em;}
+				.padd{ padding:40px 90px;
+					@media(max-width: $phone-max){padding: 0px 55px 20px;}
+					
+				}
+				ul{ margin:0px; padding:20px 0 0;
+					li{
+						list-style:none;
+						padding:10px 0;
+						p{font-size:0.75em; line-height:1.8em;
+							b{ display:block;font-family:Futura LT W01 Bold; font-weight:normal; font-size:0.75em;}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+.modal-backdrop{ background:url(../images/details/modal-bg.png) repeat;
+	&.in{ opacity:0.8;}
+}
+.inner-banner{
+	.modal-content{color:$text-color; text-align:left;}
+	}
