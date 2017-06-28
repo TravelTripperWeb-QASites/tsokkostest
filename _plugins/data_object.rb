@@ -22,14 +22,14 @@ class DataObject
 
   def method_missing(name, *arguments, &block)
     if data[name.to_s].nil?
-      super
+      return nil
     else
       name = name.to_s
       value = if definitions.has_key?(name) && definitions[name].has_key?('type') && definitions[name]['type'] == 'model'
         storage.send "find_#{definitions[name]['model_name']}_by_#{definitions[name]['foreign_key'] || 'id'}", data[name]
       elsif definitions.has_key?(name) && definitions[name].has_key?('type') && definitions[name]['type'] == 'date'
         Date.parse data[name]
-      elsif definitions.has_key?(name) && definitions[name].has_key?('type') && definitions[name]['type'] == 'detetime'
+      elsif definitions.has_key?(name) && definitions[name].has_key?('type') && definitions[name]['type'] == 'datetime'
         DateTime.parse data[name]
       else
         data[name]
