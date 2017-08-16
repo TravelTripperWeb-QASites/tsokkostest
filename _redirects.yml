@@ -794,3 +794,9 @@
 - specials_and_packages/: specials/
 - events: events/
 - http://google.com: google.com/
+- test: http://google.com
+- test/: http://google.com
+- Test: http://google.com
+- Test/: http://google.com
+- TEST: http://google.com
+- TEST/: http://google.com
