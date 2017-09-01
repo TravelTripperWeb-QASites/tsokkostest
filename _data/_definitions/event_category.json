@@ -1,0 +1,9 @@
+{
+
+    "title":
+    {
+      "required": true,  
+      "label": "Category Title"
+    } 
+  
+}
